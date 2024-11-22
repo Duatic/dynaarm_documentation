@@ -1,12 +1,14 @@
 DynaArm Software Documentation
 ##############################
 
-Official documentation for the Duatic `DynaArm <https://duatic.com/robotic-arm/>`_
-For inquirie
-
+| This is the official documentation for the Duatic `DynaArm <https://duatic.com/robotic-arm/>`_
+| For the hardware documentation please visit `<doc.duatic.com>`_.
 
 Getting started
 ***************
+
+Take a look at the :doc:`Getting Started </doc/getting_started>` guide
+
 
 Structure
 **********
@@ -31,6 +33,9 @@ The structure of the software stack is shown in the following image:
      - Underlying SDK for directly controlling the drives. Can be used to control the arm without ROS
 
 .. toctree::
-   :maxdepth: 2
+   :hidden:
    :caption: Contents:
+   
+   doc/getting_started
+   
 

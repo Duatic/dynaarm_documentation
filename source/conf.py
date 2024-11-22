@@ -23,7 +23,7 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = []
 
-
+source_suffix = ".rst"
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -31,7 +31,12 @@ exclude_patterns = []
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
+html_theme_options = {
+    "collapse_navigation": True,
+    "sticky_navigation": True,
+    "navigation_depth": -1,
 
+}
 html_context = {
     "display_github": True,
     "github_user": "Duatic",
