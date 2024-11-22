@@ -1,8 +1,15 @@
 DynaArm Software Documentation
 ##############################
 
+
+
+
 | This is the official documentation for the Duatic `DynaArm <https://duatic.com/robotic-arm/>`_
 | For the hardware documentation please visit `<doc.duatic.com>`_.
+
+.. image:: _static/dynaarm.webp
+    :width: 400
+
 
 Getting started
 ***************
