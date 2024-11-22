@@ -1,0 +1,13 @@
+repositories:
+  dynaarm_demo:
+    type: git
+    url: git@github.com:Duatic/dynaarm_demo.git
+    version: main
+  dynaarm_description:
+    type: git
+    url: git@github.com:Duatic/dynaarm_description.git
+    version: main
+  dynaarm_driver:
+    type: git
+    url: git@github.com:Duatic/dynaarm_driver.git
+    version: main

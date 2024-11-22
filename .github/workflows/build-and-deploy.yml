@@ -28,6 +28,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install vcstool
+      - name: Clone subrepos
+        run: |
+          mkdir -p source/doc
+          vcs import --input rolling.repos source/doc
       - name: Build static files
         id: build
         run: |
