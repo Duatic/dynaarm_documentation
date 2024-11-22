@@ -31,7 +31,7 @@ jobs:
       - name: Clone subrepos
         run: |
           mkdir -p source/doc
-          vcs import --input rolling.repos source/doc
+          vcs import --input repos.list source/doc
       - name: Build static files
         id: build
         run: |
