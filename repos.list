@@ -1,13 +1,13 @@
 repositories:
   dynaarm_demo:
     type: git
-    url:   https://gitlab-ci-token:${CI_JOB_TOKEN}@github.com/Duatic/dynaarm_demo
+    url:   https://gitlab-ci-token:${CI_JOB_TOKEN}@github.com/Duatic/dynaarm_demo.git
     version: main
   dynaarm_description:
     type: git
-    url: https://gitlab-ci-token:${CI_JOB_TOKEN}@github.com/Duatic/dynaarm_description
+    url: https://gitlab-ci-token:${CI_JOB_TOKEN}@github.com/Duatic/dynaarm_description.git
     version: main
   dynaarm_driver:
     type: git
-    url: https://gitlab-ci-token:${CI_JOB_TOKEN}@github.com/Duatic/dynaarm_driver
+    url: https://gitlab-ci-token:${CI_JOB_TOKEN}@github.com/Duatic/dynaarm_driver.git
     version: main
