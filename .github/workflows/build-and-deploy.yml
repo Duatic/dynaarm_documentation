@@ -44,6 +44,7 @@ jobs:
 
   # Deployment job
   deploy:
+    if: scuess() && github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -51,6 +52,5 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        if: ${{ success() && github.event_name != 'pull_request' && !env.ACT }}
         id: deployment
         uses: actions/deploy-pages@v4
