@@ -14,7 +14,7 @@ DynaArm Software Documentation
 Getting started
 ***************
 
-Take a look at the :doc:`Getting Started </doc/getting_started>` guide
+Take a look at the :doc:`Getting Started </doc/getting_started>` guide.
 
 
 Structure
