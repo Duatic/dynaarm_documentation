@@ -46,5 +46,6 @@ The structure of the software stack is shown in the following image:
    doc/getting_started
    doc/debugging
    doc/realtime
+   doc/controllers
    
 
