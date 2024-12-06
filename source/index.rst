@@ -44,5 +44,7 @@ The structure of the software stack is shown in the following image:
    :caption: Contents:
    
    doc/getting_started
+   doc/debugging
+   doc/realtime
    
 
