@@ -1,79 +1,70 @@
 Getting Started
 ################
 
+This guide provides a quick overview of how to set up and start using the DynaArm. For detailed instructions, refer to the linked sections.
 
-Basic Setup - Native installation
-*********************************
+Hardware Setup
+--------------
 
-This section describes how to do the basic setup of your workspace.
+1. **Mount the Robot:**
 
+    - Place the robot on a stable, level base.
+    - Secure it using the mounting holes on the base plate.
+    - See detailed mounting instructions in :doc:`Integration and Safety </tech_doc/integration_and_safety>`.
 
-Prerequisites
--------------
+2. **Connect Power and Communication:**
 
-* General / Simulation only
-    * Ubuntu 24.04 installation (or similar)
-* Hardware 
-    * For hardware interaction we only support a native Linux installation
-    * A native gigabit ethernet port (USB to Ethernet adapters can work but might introduce issues)
+    - Connect the 48 V power supply to the robot.
+    - Attach the Ethercat cable to the Controller PC.
+    - Ensure cables are secured and free of damage.
 
+For detailed wiring and connection instructions, refer to :doc:`Integration and Safety </tech_doc/integration_and_safety>`.
 
+Software Setup
+--------------
 
-Step 1  - Basic Setup of ROS2
------------------------------
+1. **Install ROS 2:**
 
-Install ROS2 Jazzy natively according to the  `official guide <https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html>`_.
+    - Set up a compatible ROS 2 environment (e.g., Jazzy or Iron).
+    - Follow the steps in :doc:`Setup Controller PC </user_doc/setup_controller_pc>`.
 
-.. note::
-    At the moment we only support ROS2 Jazzy. If you need to run the driver with an older version please feel free to contact us.
+2. **Set Up the Workspace:**
 
+    - Create and configure a ROS 2 workspace with the DynaArm packages.
+    - Build the workspace:
+     
+    .. code-block:: bash
 
-Step 2 - Realtime Setup (hardware only)
----------------------------------------
+        colcon build --packages-up-to dynaarm_examples
 
-If you plan to work with hardware on your setup it is necessary to enable enable realtime support on your system. 
-See the realtime setup guide :doc:`realtime`.
+3. **Enable Realtime (if using hardware):**
 
-Step 3 - Create your workspace
-------------------------------
+    - Configure the system for realtime performance to ensure stable operation.
+    - See :doc:`Realtime Setup </user_doc/realtime>` for detailed steps.
 
-Next you need to create a new underlying workspace to import the dynaarm package into. 
+First Operation
+---------------
 
-.. code-block:: bash
+1. **Power On the Robot:**
 
-    # Create new workspace
-    mkdir -p dynaarm_demo_workspace && cd dynaarm_demo_workspace
-    # Get the repos.list (description of dependend reposistories)
-    wget https://github.com/Duatic/dev_workspace/blob/main/repos.list
-    # Import the repositories
-    mkdir -p src
-    vcs import src < repos.list
+    - Connect the power supply and turn on the robot.
+    - Start the `dynaarm_driver`:
 
-Step 4 - Build the code
------------------------
+    .. code-block:: bash
 
-.. code-block:: bash
+        ros2 launch dynaarm_driver startup.launch.py
 
-    # Actually build the code
-    colcon build --packages-up-to=dynaarm_examples --mixin release ccache
+2. **Move the Robot:**
 
-Step 5 - Run the code
----------------------
+    - Send the arm to its home position:
 
-.. code-block:: bash
+    .. code-block:: bash
 
-    # Source the workspace
-    source install/local_setup.bash
+        ros2 service call /go_to_home std_srvs/srv/Trigger "{}"
 
-    # Mocked hardware 
-    ros2 launch dynaarm_examples mock.launch.py
+   - Test other basic commands from :doc:`Robot Usage </user_doc/robot_usage>`.
 
-    # Or real hardware
-    ros2 launch dynaarm_examples real.launch.py 
+3. **Shutdown:**
 
-
-Step 6 - Integrate it into your own application
-------------------------------------------------
-
-Take a look at the `dynaarm_demo <https://github.com/Duatic/dynaarm_demo>`_ repository.
-You can find there multiple examples on how to run the the dynaarm with mocked hardware, in gazebo simulation or with real hardware. 
+   - Always secure the robot before powering off.
+   - Follow the shutdown procedure in :doc:`Robot Usage </user_doc/robot_usage>`.

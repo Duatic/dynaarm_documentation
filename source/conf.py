@@ -49,3 +49,9 @@ html_context = {
 
 html_favicon = "_static/logo.png"
 html_logo = "_static/logo.png"
+
+rst_prolog = """
+.. warning::
+
+   **Important Notice:** The DynaArm is currently a prototype and not ready for commercial use. It is intended solely for research and development purposes. Users are responsible for ensuring safe operation during its use.
+"""
