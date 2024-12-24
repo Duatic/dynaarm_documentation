@@ -15,6 +15,8 @@ Prerequisites
    - Native Linux installation required for hardware interaction.
    - Native gigabit Ethernet port (USB to Ethernet adapters might work but could introduce issues).
 
+.. _install_ros_2_jazzy:
+
 Step 1 - Install ROS 2 Jazzy
 ----------------------------
 
@@ -27,6 +29,8 @@ Step 2 - Realtime Setup (Hardware Only)
 ---------------------------------------
 
 For hardware interaction, your system must support real-time operations. Follow the **Realtime Setup** guide: :doc:`realtime`.
+
+.. _create_your_workspace:
 
 Step 3 - Create Your Workspace
 ------------------------------

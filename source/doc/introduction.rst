@@ -6,7 +6,7 @@ The DynaArm is an innovative robotic arm designed for high precision, flexibilit
 Unique Features
 ---------------
 
-- **Exceptional Weight-to-Force Ratio:** The DynaArm offers unparalleled performance by maximizing force output while minimizing weight, making it ideal for precision tasks.
+- **Exceptional Weight-to-Force Ratio:** The DynaArm offers unparalleled performance by maximizing force output while minimizing weight.
 - **Direct Drive Actuation:** The use of direct drive motors provides high efficiency and eliminates the need for transmission components, enabling seamless and precise movements.
 - **Backdrivability:** This unique feature allows the arm to move freely when force is applied externally, offering enhanced safety and adaptability in collaborative setups. (Backdrivability refers to the ability of a robotic joint to be physically moved by an external force without resistance, crucial for responsive and safe interactions.)
 

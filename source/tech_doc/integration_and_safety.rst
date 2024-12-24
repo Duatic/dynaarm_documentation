@@ -3,6 +3,8 @@ Integration and Safety
 
 This section provides guidelines for integrating the DynaArm into your setup and ensuring safe operation. Proper integration and adherence to safety measures are critical for optimal performance and to minimize risks.
 
+.. _mounting_instructions:
+
 Mounting Instructions
 ---------------------
 
@@ -26,6 +28,9 @@ The technical drawing shows the locations and dimensions of the mounting holes f
 
    - Ensure the robot does not wobble or shift during operation.
    - Tighten all screws and bolts securely.
+
+
+.. _wiring_and_connections:
 
 Wiring and Connections
 ----------------------

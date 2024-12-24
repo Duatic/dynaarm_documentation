@@ -43,11 +43,11 @@ html_context = {
     "github_repo": "dynaarm_software_documentation",
     "github_version": "main/",
     "conf_py_path": "/source/",
-    "favicon": "favicon.ico",
+    "favicon": "logo.png",
     "logo": "logo.png"
 }
 
-html_favicon = "_static/logo.png"
+html_favicon = "_static/logo_small.png"
 html_logo = "_static/logo.png"
 
 rst_prolog = """
