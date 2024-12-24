@@ -1,51 +1,43 @@
-DynaArm Software Documentation
+DynaArm Documentation
 ##############################
 
-
-
-
-| This is the official documentation for the Duatic `DynaArm <https://duatic.com/robotic-arm/>`_
-| For the hardware documentation please visit `<doc.duatic.com>`_.
+| Welcome to the official documentation for the Duatic `DynaArm <https://duatic.com/robotic-arm/>`_
+| This document provides a comprehensive guide to understanding, using, and developing with the DynaArm robotic system.
 
 .. image:: _static/dynaarm.webp
     :width: 400
 
-
-Getting started
-***************
-
-Take a look at the :doc:`Getting Started </doc/getting_started>` guide.
-
-
-Structure
-**********
-
-The structure of the software stack is shown in the following image:
-
-.. image:: _static/software_stack.png
-
-.. list-table:: Packages
-   :widths: 25 75 
-   :header-rows: 1
-
-   * - Package
-     - Description
-   * - `dynaarm_description <https://github.com/Duatic/dynaarm_description>`_
-     - Description package containing URDF and meshes for the DynaArm
-   * - `dynaarm_driver <https://github.com/Duatic/dynaarm_driver>`_
-     - ros2_control based driver for the DynaArm.
-   * - `dynaarm_demo <https://github.com/Duatic/dynaarm_demo>`_
-     - Demo applications for the DynaArm. Usually used for testing a new hardware setup.
-   * - `rsl_drive_sdk <https://github.com/leggedrobotics/rsl_drive_sdk>`_
-     - Underlying SDK for directly controlling the drives. Can be used to control the arm without ROS
-
 .. toctree::
-   :hidden:
+   :maxdepth: 1
    :caption: Contents:
-   
-   doc/getting_started
-   doc/debugging
-   doc/realtime
-   doc/controllers
-   
 
+   doc/introduction
+   doc/getting_started
+   doc/system_overview
+   tech_doc/index
+   user_doc/index   
+
+Overview
+--------
+
+The DynaArm is an innovative robotic arm designed for high precision, flexibility, and integration into diverse applications. It combines advanced hardware with modular software to deliver powerful performance for research, industry, and prototyping.
+
+**Documentation Overview:**
+
+- **Introduction:** A general introduction to the DynaArm system and its unique features.
+- **Getting Started:** Quick setup steps for hardware and software to get the robot running.
+- **System Overview:** High-level details about the architecture and components.
+- **Technical Documentation:** Comprehensive hardware details, including safety, integration, and specifications.
+- **User Documentation:** Setup instructions, software guides, and maintenance details.
+
+Target Audience
+----------------
+
+This documentation is intended for:
+
+- **Researchers and Developers:** Engineers, software developers, and researchers who wish to contribute to the system’s development or integrate it into experimental setups.
+
+Resources
+---------
+
+- For additional resources, visit the `DynaArm homepage <https://duatic.com/robotic-arm/>`_.
