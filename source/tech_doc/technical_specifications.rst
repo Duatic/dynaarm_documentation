@@ -9,32 +9,42 @@ Specifications Table
 +--------------------------+-------------------+
 | **Specification**        | **Value**         |
 +==========================+===================+
-| Maximum Payload          | 16 kg             |
+| Maximum Payload [1]_     | 22 kg             |
 +--------------------------+-------------------+
-| Continuous Payload       | 12 kg             |
+| Continuous Payload [1]_  | 12 kg             |
 +--------------------------+-------------------+
-| Reach                    | 1.1 m             |
+| Reach                    | 1.2 m             |
 +--------------------------+-------------------+
-| Total Weight             | 9 kg              |
+| Total Weight [2]_        | 9.2 kg            |
 +--------------------------+-------------------+
 | End Effector Speed       | 10 m/s            |
 +--------------------------+-------------------+
-| Repeatability            | < 1 mm            |
+| Joint Position Accuracy  | ± 25 μrad         |
 +--------------------------+-------------------+
 | Degrees of Freedom       | 6                 |
 +--------------------------+-------------------+
-| Input Voltage            | 48 V              |
+| Input Voltage            | 48 V (DC)         |
 +--------------------------+-------------------+
 | Protection Rating        | IP66              |
 +--------------------------+-------------------+
 | Joint Torque Accuracy    | ± 0.5 Nm          |
 +--------------------------+-------------------+
-| Power Consumption        | TBD               |
-+--------------------------+-------------------+
-| Operating Temperature    | 0°C to 45°C       |
-+--------------------------+-------------------+
 | Communication Interface  | Ethercat          |
 +--------------------------+-------------------+
+| Communication Frequency  | 1000 Hz           |
++--------------------------+-------------------+
+
+.. [1] at maximum rachability
+.. [2] without covers
+
+Range of motion
+---------------
+
+.. image:: ../_static/dynaarm_rom.png
+   :alt: Range of motion
+   :width: 80%
+
+
 
 Additional Notes
 ----------------

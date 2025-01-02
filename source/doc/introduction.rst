@@ -6,18 +6,25 @@ The DynaArm is an innovative robotic arm designed for high precision, flexibilit
 Unique Features
 ---------------
 
-- **Exceptional Weight-to-Force Ratio:** The DynaArm offers unparalleled performance by maximizing force output while minimizing weight.
-- **Direct Drive Actuation:** The use of direct drive motors provides high efficiency and eliminates the need for transmission components, enabling seamless and precise movements.
-- **Backdrivability:** This unique feature allows the arm to move freely when force is applied externally, offering enhanced safety and adaptability in collaborative setups. (Backdrivability refers to the ability of a robotic joint to be physically moved by an external force without resistance, crucial for responsive and safe interactions.)
+- **High Payload-to-Weight Ratio:** Enables efficient handling of heavy objects while minimizing the overall system weight.
+- **High Speed and Acceleration:** Facilitates rapid and dynamic movements for increased productivity in various applications.   
+- **High Reachability:** Provides a wide workspace for versatile manipulation tasks.
+- **High Torque Accuracy:** Ensures precise and repeatable motion control for demanding applications.
+- **Quasi-Direct Drive Technology:** Minimizes friction and inertia for improved performance, efficiency, and responsiveness.
+- **High Transparency/Backdrivability:** Enables intuitive human-robot interaction and collaborative applications.
+- **No control box:** The arm can be attached to the ethernet port of any computer which acts as its controller.
+- **Weatherproof:** Dust and water-resistant suitable for most outdoor environments
+
 
 Applications
 ------------
 
 While the DynaArm is designed for industrial applications, its initial focus is on research and development due to its prototype status. Potential use cases include:
 
-- **Research:** Testing new algorithms and motion control strategies in academic or industrial labs.
-- **Prototyping:** Developing proof-of-concept systems for manufacturing or robotics applications.
-- **Education:** Demonstrating advanced robotic principles in a controlled environment.
+- **Industrial Automation:** Material handling, assembly, machine tending, welding, and other manufacturing processes.   
+- **Research and Development:** Robotics research, prototyping, and testing.
+- **Healthcare:** Rehabilitation, assistive devices, and surgical robotics.
+- **Service Robotics:** Logistics, delivery, and other service applications.
 
 Development Status
 ------------------
