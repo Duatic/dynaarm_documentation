@@ -3,7 +3,7 @@
 [![build-and-deploy](https://github.com/Duatic/dynaarm_software_documentation/actions/workflows/build-and-deploy.yml/badge.svg)](https://github.com/Duatic/dynaarm_software_documentation/actions/workflows/build-and-deploy.yml)
 
 This contains the documentation for the DynaArm software. \
-The deployed documentation can be read at [dynaarm.duatic.com](https://dynaarm.duatic.com). 
+The deployed documentation can be read at [docs.duatic.com](https://docs.duatic.com). 
 The current state on the `main` branch is automatically published to github pages.
 
 ## License
