@@ -1,7 +1,9 @@
 Introduction
 ============
 
-The DynaArm is an innovative robotic arm designed for high precision, flexibility, and integration into diverse applications. It combines advanced hardware with modular software to deliver powerful performance for research, industry, and prototyping.
+The DynaArm is a 6-DOF, high-performance robotic arm designed for contact-rich manipulation, ease of use, and demanding applications in unstructured environments. Combining advanced hardware with modular software, it delivers powerful performance for research, industry, and prototyping.
+
+With its significant payload capacity and lightweight, compact form factor, the DynaArm achieves exceptional speed and agility through innovative pseudo-drive technology. Its design emphasizes high transparency and backdrivability, enabling dynamic, precise movements and facilitating seamless human-robot interaction for collaborative operations.
 
 Unique Features
 ---------------
