@@ -6,8 +6,8 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'DynaArm Software Documentation'
-copyright = '2024, Duatic AG'
+project = 'DynaArm Documentation'
+copyright = '2025, Duatic AG'
 author = 'Lennart Nachtigall'
 
 # -- General configuration ---------------------------------------------------
@@ -40,7 +40,7 @@ html_theme_options = {
 html_context = {
     "display_github": True,
     "github_user": "Duatic",
-    "github_repo": "dynaarm_software_documentation",
+    "github_repo": "dynaarm_documentation",
     "github_version": "main/",
     "conf_py_path": "/source/",
     "favicon": "logo.png",

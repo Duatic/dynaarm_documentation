@@ -34,29 +34,38 @@ System Startup
 Basic Commands
 --------------
 
-- **Move to Home Position:**
+- **Start the mocked robot:**   
+   
+   If you have also downloaded the dynaarm_examples repository.
 
-   Move the robotic arm to its default home position.
+   .. code-block:: bash      
 
-   .. code-block:: bash
+      ros2 launch dynaarm_examples mock.launch.py
+   
+   **Arguments:**
 
-      ros2 service call /go_to_home std_srvs/srv/Trigger "{}"
+   - **gui** - flag to enable `joint_state_publisher_gui`.
+      - Valid choices: `True`, `False`
+      - Default: `True`
 
-- **Move to a Specific Position:**
+   - **dof** - select the desired degrees of freedom (DoF).
+      - Valid choices: `1`, `2`, `3`, `4`, `5`, `6`
+      - Default: `6`
 
-   Send the arm to a custom set of coordinates.
+   - **covers** - show or hide the covers of the robot.
+      - Default: `False`
 
-   .. code-block:: bash
-
-      ros2 action send_goal /move_arm custom_msgs/MoveArm "{target: [0.5, 0.3, 0.1]}"
+   - **version** - select the desired version of the robot.
+      - Valid choices: `arowna4`, `baracuda12`
+      - Default: `baracuda12`
 
 - **Monitor System Status:**
 
-   Check the status of the DynaArm, including joint positions and operational state.
+   Check the status of the DynaArm, including joint positions
    
    .. code-block:: bash
 
-      ros2 topic echo /arm_status
+      ros2 topic echo /dynaarm_status_controller/state
 
 Shutdown Procedure
 ------------------
