@@ -1,0 +1,38 @@
+name: build-pdf
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+  # Build job
+  build:
+    # Specify runner +  build & upload the static files as an artifact
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          cache: 'pip'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install vcstool
+          apt-get update
+          apt-get install -y latexmk
+      - name: Clone subrepos
+        run: |
+          mkdir -p source/user_doc/src
+          vcs import --input repos.list source/user_doc/src
+      - name: Build static files
+        id: build
+        run: |
+          make latexpdf
+      - name: Store pdf
+        uses: actions/upload-artifact@v4
+        with:
+            path: build/latex
