@@ -36,4 +36,4 @@ jobs:
       - name: Store pdf
         uses: actions/upload-artifact@v4
         with:
-            path: build/latex
+            path: build/latex/DynaArmDocumentation.pdf
