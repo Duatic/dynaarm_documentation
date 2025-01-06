@@ -23,7 +23,7 @@ jobs:
           pip install -r requirements.txt
           pip install vcstool
           sudo apt-get update
-          sudo apt-get install -y latexmk
+          sudo apt-get install -y latexmk texlive-latex-extra
       - name: Clone subrepos
         run: |
           mkdir -p source/user_doc/src
