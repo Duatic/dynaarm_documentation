@@ -8,7 +8,7 @@
 
 project = 'DynaArm Documentation'
 copyright = '2025, Duatic AG'
-author = 'Lennart Nachtigall'
+author = 'Duatic AG'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -24,6 +24,7 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = ['**/CONTRIBUTING.md', '**/README.md', '**/CHANGELOG.rst']
 
+master_doc = "index"
 
 source_suffix = ".rst"
 
@@ -51,6 +52,16 @@ html_context = {
 
 html_favicon = "_static/logo_small.png"
 html_logo = "_static/logo.png"
+
+
+# -- Options for PDF output --------------------------------------------------------------------------------
+#latex_engine = "xelatex"
+latex_elements = {'fontenc' : r'\usepackage[LGR,T1]{fontenc}'}
+latex_documents = [
+  (master_doc, 'DynaArmDocumentation.tex', 'DynaArm Documentation',
+   'Duatic AG', 'manual'),
+]
+latex_logo = "_static/logo_dark.png"
 
 rst_prolog = """
 .. warning::
