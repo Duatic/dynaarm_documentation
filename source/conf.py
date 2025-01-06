@@ -18,10 +18,12 @@ extensions = [
     "sphinx.ext.githubpages",
     "sphinx.ext.todo",
     "sphinx_rtd_theme",
+    "myst_parser"
 ]
 
 templates_path = ['_templates']
-exclude_patterns = []
+exclude_patterns = ['**/CONTRIBUTING.md', '**/README.md', '**/CHANGELOG.rst']
+
 
 source_suffix = ".rst"
 

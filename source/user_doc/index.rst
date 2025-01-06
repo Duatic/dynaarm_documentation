@@ -10,3 +10,4 @@ This section provides guidance for setting up, operating, and maintaining the Dy
    robot_usage
    debugging
    realtime
+   components
