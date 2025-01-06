@@ -1,6 +1,7 @@
 Software Components
 ####################
 
+For a more in detail description please refer to the per software component documentation:
 
 .. toctree::
 

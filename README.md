@@ -27,6 +27,18 @@ Building the documentation locally is recommended for testing.
 
 In order to update the documentation please follow the following workflow.
 
+#### Prerequisites 
+
+The documentation includes the local documentation of the related software repositories. (description,driver,demo). 
+In order to fully build the documentation locally you need to clone those repositories:
+
+```
+mkdir -p source/user_doc/src
+vcs import source/user_doc/src < repos.list
+```
+
+__NOTE:__ If the documentation in one of those repositories has changed and you want to test that locally you need to run: `vcs pull source/user_doc/src`.
+
 #### 1. Do your changes
 
 Just do the changes you want to do. ReStructured Text (RST) in combination with sphinx needs a bit of time to get used to but is very powerfull in the end.
