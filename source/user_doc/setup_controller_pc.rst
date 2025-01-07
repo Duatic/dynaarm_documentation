@@ -32,17 +32,22 @@ For hardware interaction, your system must support real-time operations. Follow 
 
 .. _create_your_workspace:
 
-Step 3 - Create Your Workspace
-------------------------------
-
-Create the ROS 2 workspace:
+Step 3 - Create Your ROS 2 Workspace
+-------------------------------------
 
 .. code-block:: bash
 
     # Create a new workspace
-    mkdir -p dynaarm_demo_workspace && cd dynaarm_demo_workspace    
+    mkdir -p dynaarm_demo_workspace && cd dynaarm_demo_workspace
+    mkdir -p src    
 
-Download the repos.list file into the workspace:
+Step 4 - Clone repositories into workspace
+------------------------------------------
+
+Option 1:
+~~~~~~~~~
+
+Download the repos.list file into the workspace to clone the repos automatically.
 
 :download:`repos.list </_static/repos.list>`
 
@@ -50,13 +55,17 @@ Clone the necessary repositories:
 
 .. code-block:: bash
     
-    cd dynaarm_demo_workspace    
-
-    # Import the repositories
-    mkdir -p src
+    cd dynaarm_demo_workspace
+    
+    # Clone the repositories
     vcs import src < repos.list
 
-Step 4 - Build the Code
+Option 2:
+~~~~~~~~~
+
+Clone each repository inside the repos.list manually into the *src* directory of your workspace.
+
+Step 5 - Build the Code
 -----------------------
 
 .. code-block:: bash
@@ -64,7 +73,7 @@ Step 4 - Build the Code
     # Build the workspace
     colcon build --packages-up-to=dynaarm_examples --mixin release ccache
 
-Step 5 - Run the Code
+Step 6 - Run the Code
 ---------------------
 
 You can now run the DynaArm using either mocked or real hardware:
@@ -80,11 +89,11 @@ You can now run the DynaArm using either mocked or real hardware:
     # Or with real hardware, modify the ethercat_bus to your bus.
     ros2 launch dynaarm_examples real.launch.py ethercat_bus:=enp86s0 
 
-
-Step 6 - Integrate into Your Application
+Step 7 - Integrate into Your Application
 ----------------------------------------
 
-Visit the `dynaarm_demo <https://github.com/Duatic/dynaarm_demo>`_ repository for multiple examples. These include:
-- Running the DynaArm with mocked hardware.
-- Simulation in Gazebo.
-- Real hardware integration.
+Visit the `dynaarm_demo <https://github.com/Duatic/dynaarm_demo>`_ repository for multiple examples:
+
+* Running the DynaArm with mocked hardware.
+* Simulation in Gazebo.
+* Real hardware integration.
