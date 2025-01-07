@@ -4,7 +4,7 @@ DynaArm Documentation
 | Welcome to the official documentation for the Duatic `DynaArm <https://duatic.com/robotic-arm/>`_
 | This document provides a comprehensive guide to understanding, using, and developing with the DynaArm robotic system.
 
-.. image:: _static/dynaarm.webp
+.. image:: _static/dynaarm.png
     :width: 400
 
 .. toctree::

@@ -15,7 +15,7 @@ This repository is under [Apache License 2.0](./LICENSE)
 You will need several python3 requirements. You can either install them via the `requirements.txt` and pip install or if you are on a Debian based system you can also install them via apt:
 
 ```
-sudo apt install python3-sphinx python3-sphinx-rtd-theme python3-sphinx-copybutton
+sudo apt install python3-sphinx python3-sphinx-rtd-theme python3-sphinx-copybutton myst-parser
 ```
 
 __NOTE:__ You only need these dependencies if you want to build the documentation locally.\
@@ -26,6 +26,18 @@ Building the documentation locally is recommended for testing.
 ## Workflow
 
 In order to update the documentation please follow the following workflow.
+
+#### Prerequisites 
+
+The documentation includes the local documentation of the related software repositories. (description,driver,demo). 
+In order to fully build the documentation locally you need to clone those repositories:
+
+```
+mkdir -p source/user_doc/src
+vcs import source/user_doc/src < repos.list
+```
+
+__NOTE:__ If the documentation in one of those repositories has changed and you want to test that locally you need to run: `vcs pull source/user_doc/src`.
 
 #### 1. Do your changes
 
