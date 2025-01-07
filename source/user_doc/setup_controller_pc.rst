@@ -35,14 +35,23 @@ For hardware interaction, your system must support real-time operations. Follow 
 Step 3 - Create Your Workspace
 ------------------------------
 
-To import and build the DynaArm package, create a new workspace:
+Create the ROS 2 workspace:
 
 .. code-block:: bash
 
     # Create a new workspace
-    mkdir -p dynaarm_demo_workspace && cd dynaarm_demo_workspace
-    # Get the repos.list (description of dependent repositories)
-    wget https://github.com/Duatic/dev_workspace/blob/main/repos.list
+    mkdir -p dynaarm_demo_workspace && cd dynaarm_demo_workspace    
+
+Download the repos.list file into the workspace:
+
+:download:`repos.list </_static/repos.list>`
+
+Clone the necessary repositories:
+
+.. code-block:: bash
+    
+    cd dynaarm_demo_workspace    
+
     # Import the repositories
     mkdir -p src
     vcs import src < repos.list
@@ -68,8 +77,9 @@ You can now run the DynaArm using either mocked or real hardware:
     # Run with mocked hardware
     ros2 launch dynaarm_examples mock.launch.py
 
-    # Or with real hardware
-    ros2 launch dynaarm_examples real.launch.py 
+    # Or with real hardware, modify the ethercat_bus to your bus.
+    ros2 launch dynaarm_examples real.launch.py ethercat_bus:=enp86s0 
+
 
 Step 6 - Integrate into Your Application
 ----------------------------------------

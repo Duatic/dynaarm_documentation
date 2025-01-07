@@ -59,11 +59,11 @@ First Operation
 #. **Power On the Robot**
 
     - Connect the power supply to the robot and switch it on.
-    - Launch the dynaarm_driver software to initialize the system:
+    - Launch the dynaarm software to initialize the system:
 
     .. code-block:: bash
 
-        ros2 launch dynaarm_driver startup.launch.py
+        ros2 launch dynaarm_examples startup.launch.py
 
     - During the start-up process, the arm may briefly enter an uncontrolled state. Ensure no one is within its operating range.
 
