@@ -9,7 +9,7 @@ Hardware Setup
 #. **Mount the Robot:**
 
     - Place the robot on a stable, level base.
-    - Secure it using the mounting holes on the base plate @Eris: which screws?
+    - Secure it using the mounting holes on the base plate with M5 screws (access from the top) or M6 screws (access from the bottom)?
     - See detailed mounting instructions in :ref:`Mounting Instructions <mounting_instructions>`.
 
 #. **Connect Power and Communication:**
