@@ -29,7 +29,7 @@ Specifications Table
 +--------------------------+-------------------+
 | Joint Torque Accuracy    | ± 0.5 Nm          |
 +--------------------------+-------------------+
-| Communication Interface  | Ethercat          |
+| Communication Interface  | EtherCAT          |
 +--------------------------+-------------------+
 | Communication Frequency  | 1000 Hz           |
 +--------------------------+-------------------+
