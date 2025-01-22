@@ -15,7 +15,7 @@ This repository is under [Apache License 2.0](./LICENSE)
 You will need several python3 requirements. You can either install them via the `requirements.txt` and pip install or if you are on a Debian based system you can also install them via apt:
 
 ```
-sudo apt install python3-sphinx python3-sphinx-rtd-theme python3-sphinx-copybutton myst-parser
+sudo apt install python3-sphinx python3-sphinx-rtd-theme python3-sphinx-copybutton python3-myst-parser
 ```
 
 __NOTE:__ You only need these dependencies if you want to build the documentation locally.\
