@@ -1,29 +1,29 @@
 Setup Controller PC
 ####################
 
-This section describes how to set up your workspace and hardware environment for using the DynaArm.
+This section explains how to set up your workspace and hardware environment for using the DynaArm.
 
 Prerequisites
 -------------
 
 * **General / Simulation only:**
 
-   - Ubuntu 24.04 installation (or similar).
+   - Ubuntu 24.04 installation (or a similar Linux distribution).
 
 * **Hardware Setup:**
 
-   - Native Linux installation required for hardware interaction.
-   - Native gigabit Ethernet port (USB to Ethernet adapters might work but could introduce issues).
+   - Native Linux installation is required for hardware interaction
+   - A native gigabit Ethernet port is recommended (USB to Ethernet adapters may work but could introduce latency or reliability issues).
 
 .. _install_ros_2_jazzy:
 
 Step 1 - Install ROS 2 Jazzy
 ----------------------------
 
-Install ROS 2 Jazzy natively according to the `official guide <https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html>`_.
+Install ROS 2 Jazzy natively by following the `official guide <https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html>`_.
 
 .. note::
-    At the moment, we only support ROS 2 Jazzy. For compatibility with other versions, please contact us.
+    Currently, only ROS 2 Jazzy is supported. For compatibility with other versions, please contact us.
 
 Step 2 - Realtime Setup (Hardware Only)
 ---------------------------------------
@@ -35,59 +35,90 @@ For hardware interaction, your system must support real-time operations. Follow 
 Step 3 - Create Your ROS 2 Workspace
 -------------------------------------
 
+Create a new workspace directory:
+
 .. code-block:: bash
 
-    # Create a new workspace
-    mkdir -p dynaarm_demo_workspace && cd dynaarm_demo_workspace
-    mkdir -p src    
+    mkdir -p dynaarm_demo_workspace/src && cd dynaarm_demo_workspace
 
-Step 4 - Clone repositories into workspace
+Step 4 - Clone Repositories into Workspace
 ------------------------------------------
 
-Option 1:
-~~~~~~~~~
+**Option 1 - Automatic Cloning**
 
-Download the repos.list file into the workspace to clone the repos automatically.
+If you are not already inside the workspace directory created in step 3, switch to this directory:
+
+.. code-block:: bash
+
+    cd dynaarm_demo_workspace
+
+Download the `repos.list` file into the workspace for automatic cloning:
 
 :download:`repos.list </_static/repos.list>`
+
+.. code-block:: bash
+
+    wget https://docs.duatic.com/_static/repos.list
 
 Clone the necessary repositories:
 
 .. code-block:: bash
-    
-    cd dynaarm_demo_workspace
-    
-    # Clone the repositories
+
     vcs import src < repos.list
 
-Option 2:
-~~~~~~~~~
+**Option 2 - Manual Cloning**
 
-Clone each repository inside the repos.list manually into the *src* directory of your workspace.
+Clone each repository listed in `repos.list` manually into the *src* directory of your workspace.
 
-Step 5 - Build the Code
------------------------
+Step 5 - Build the Code / Workspace
+-----------------------------------
+
+First, install all dependencies:
 
 .. code-block:: bash
 
-    # Build the workspace
+    rosdep init
+    rosdep update
+    rosdep install -r --from-paths ./src --ignore-src --rosdistro $ROS_DISTRO -y
+
+Exclude the simulation and test packages from the `cartesian_controllers` repository by placing a `COLCON_IGNORE` file in the respective directories:
+
+.. code-block:: bash
+
+    touch src/cartesian_controllers/cartesian_controller_simulation/COLCON_IGNORE
+    touch src/cartesian_controllers/cartesian_controller_tests/COLCON_IGNORE
+
+Build the workspace:
+
+.. code-block:: bash
+
+    colcon build
+
+.. 
     colcon build --packages-up-to=dynaarm_examples --mixin release ccache
 
 Step 6 - Run the Code
 ---------------------
 
-You can now run the DynaArm using either mocked or real hardware:
+Source your workspace after building:
 
 .. code-block:: bash
 
-    # Source the workspace
     source install/local_setup.bash
 
-    # Run with mocked hardware
+**Run Mocked Hardware**
+
+.. code-block:: bash
+
     ros2 launch dynaarm_examples mock.launch.py
 
-    # Or with real hardware, modify the ethercat_bus to your bus.
-    ros2 launch dynaarm_examples real.launch.py ethercat_bus:=enp86s0 
+**Run Real Hardware**
+
+Modify the `ethercat_bus` parameter to match your Ethernet interface:
+
+.. code-block:: bash
+
+    ros2 launch dynaarm_examples real.launch.py ethercat_bus:=enp86s0
 
 Step 7 - Integrate into Your Application
 ----------------------------------------
