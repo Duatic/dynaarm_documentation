@@ -1,16 +1,17 @@
 Getting Started
 ################
 
-This guide provides a quick overview of how to set up and start using the DynaArm. For detailed instructions, refer to the linked sections.
+This guide offers a concise overview of setting up and using the DynaArm. For more detailed instructions, follow the linked sections.
 
 Hardware Setup
 --------------
 
 **Mount the Robot**
 
-- Place the robot on a stable, level base.
-- Secure it using the mounting holes on the base plate with M5 screws (top access) or M6 screws (bottom access).
-- See detailed mounting instructions in :ref:`Mounting Instructions <mounting_instructions>`.
+- Use a stable, level surface for the robot.
+- Secure it with M5 screws (top) or M6 screws (bottom).
+
+For detailed steps, see :ref:`Mounting Instructions <mounting_instructions>`.
 
 **Connect Power and Communication**
 
@@ -25,22 +26,17 @@ Software Setup
 
 **Install ROS 2 Jazzy**
 
-- Follow the :ref:`detailed steps <install_ros_2_jazzy>` to set up ROS 2 Jazzy.
-- Ensure a compatible ROS 2 environment is configured.
+- Follow the :ref:`detailed steps <install_ros_2_jazzy>` to install ROS 2 Jazzy.
+- Verify that your ROS 2 environment is properly configured.
 
-**Enable Realtime (if using hardware)**
+**Enable Realtime (for hardware use)**
 
-- Refer to the :doc:`detailed steps </user_doc/realtime>` for configuring realtime performance.
+- See :doc:`detailed steps </user_doc/setup_controller_pc/components/realtime>` to configure realtime performance.
 - Proper configuration ensures stable hardware operation.
 
 **Set Up the Workspace**
 
 - Follow the :ref:`detailed steps <create_your_workspace>` to create and configure a ROS 2 workspace.
-- Build the workspace:
-
-.. code-block:: bash
-
-    colcon build
 
 First Operation
 ----------------
@@ -49,83 +45,45 @@ First Operation
 
 .. warning::
 
-    **Important Notice:** The DynaArm does not currently have brakes.
+   **Important Notice:** The DynaArm does not have brakes.
 
-    - When the power is removed or during the start-up process, the arm will not hold itself in position.
-    - Before starting or shutting down the robot, ensure the arm is placed in a stable, secure position where it cannot fall or cause damage.
-    - If possible, physically support the arm or ensure it rests on a stable surface to prevent uncontrolled movement.
+   - The arm will not hold its position when power is off or during start-up.
+   - Ensure the arm is placed securely to prevent it from falling or causing damage.
+   - If necessary, physically support the arm or rest it on a stable surface.
 
 **Power On the Robot**
 
 - Connect the power supply to the robot and switch it on.
+
+**Start the Software Driver**
+
 - Modify the `ethercat_bus` parameter to match your Ethernet interface:
 
-.. code-block:: bash
+.. include:: /user_doc/robot_usage/components/commands.rst
+   :start-after: .. include-start-real-command
+   :end-before: .. include-end-real-command
 
-    ros2 launch dynaarm_examples real.launch.py ethercat_bus:=enp86s0
+- During start-up, the arm may briefly move uncontrollably. Keep a safe distance from its range of motion.
+- Once started, the robot will enter freeze control mode.
 
-- During the start-up process, the arm may briefly enter an uncontrolled state. Ensure no one is within its operating range.
-- The robot is now in freeze control mode.
+**Activating Freedrive Mode**
 
-**Activate Freedrive Mode**
+.. include:: /user_doc/robot_usage/components/commands.rst
+   :start-after: .. include-start-freedrive-mode
+   :end-before: .. include-end-freedrive-mode
 
-To freely move the robot around, activate the `freedrive_controller`:
+**Using a Gamepad to Control the Robot**
 
-.. code-block:: bash
+.. include:: /user_doc/robot_usage/components/commands.rst
+   :start-after: .. include-start-gamepad
+   :end-before: .. include-end-gamepad
 
-    ros2 control switch_controllers --activate freedrive_controller --deactivate freeze_controller
-
-Once enabled, you can manually move the robot by guiding it with your hands.
-
-**Control the Robot with a Gamepad**
-
-To control the robot using a gamepad:
-
-1. Ensure that your gamepad is connected to the computer.
-2. Deactivate the `freedrive_controller` (if it is currently active) and activate the `joint_trajectory_controller`:
-
-.. code-block:: bash
-
-    ros2 control switch_controllers --activate joint_trajectory_controller --deactivate freedrive_controller
-
-3. Launch the gamepad interface:
-
-.. code-block:: bash
-
-    ros2 launch dynaarm_gamepad_interface gamepad_interface.launch.py
-
-With the gamepad interface active, you can control the robot's movement using the connected gamepad. The following controls are available:
-
-.. list-table:: Basic Button Commands
-   :header-rows: 1
-
-   * - Control
-     - Function
-   * - **L1 (Left Shoulder)**
-     - Acts as the "deadman_switch". It must be pressed to enable movement.
-
-.. list-table:: Joint Trajectory Button Commands
-   :header-rows: 1
-
-   * - Control
-     - Joint Name
-   * - **Left Joystick X-Axis**
-     - shoulder_rotation
-   * - **Left Joystick Y-Axis**
-     - shoulder_flexion
-   * - **Right Joystick Y-Axis**
-     - elbow_flexion
-   * - **Right Joystick X-Axis**
-     - forearm_rotation
-   * - **L2 (Left Trigger) / R2 (Right Trigger)**
-     - wrist_flexion
-   * - **Left Joystick Press / Right Joystick Press**
-     - wrist_rotation
+For details on gamepad controls, including button mappings, see :ref:`the mapping list <gamepad_controls>`.
 
 
+Shutdown
+---------
 
-**Shutdown**
-
-- Always move the arm to a stable position before powering off, as the arm will become unpowered and unable to hold itself.
-- Follow the shutdown procedure detailed in :doc:`Robot Usage </user_doc/robot_usage>`.
-- Secure the arm in place or ensure it is resting on a stable surface before disconnecting the power supply.
+- Move the arm to a stable position before powering off. When unpowered, the arm cannot hold its position.
+- Follow the shutdown procedure in :doc:`Robot Usage </user_doc/robot_usage/robot_usage>`.
+- Secure the arm or place it on a stable surface before disconnecting the power supply.
