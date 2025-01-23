@@ -1,5 +1,5 @@
 Realtime
-#########
+--------
 
 Within the ros2control based software stack for the DynaArm there are two componentes which are timing critical.
 
@@ -33,8 +33,6 @@ Install the linux-lowlatency package via `sudo apt install linux-lowlatency`. Af
 .. note::
     
     Different linux distribution may ship different kernel packages. E.g. Debian already ships a pre-built rt-kernel package but does not ship a low latency package.
-
-
 
 Permissions
 ============
