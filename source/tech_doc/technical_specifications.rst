@@ -6,6 +6,13 @@ This section provides a detailed overview of the technical specifications of the
 Specifications Table
 --------------------
 
+.. note::
+   **Disclaimer**: 
+   
+   - Most specifications are not yet verified and are based on theoretical engineering calculations.   
+   - Joint position accuracy is derived from joint encoder specifications.   
+   - Comprehensive validation tests are planned to confirm these values.
+
 +--------------------------+-------------------+
 | **Specification**        | **Value**         |
 +==========================+===================+
