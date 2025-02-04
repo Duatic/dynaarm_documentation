@@ -15,20 +15,93 @@ Mounting Instructions
 
 2. **Secure the Robot:**
 
-   - Use the mounting holes on the robot’s base plate.
    - Follow the dimensions provided in the technical drawing below for proper alignment.
 
-.. image:: ../_static/base_plate.png
-   :alt: Technical drawing of the DynaArm base plate
-   :width: 80%
+The following drawing indicates the base plate's mounting features for secure attachment of the DynaArm.
 
-The technical drawing shows the locations and dimensions of the mounting holes for secure attachment.
+.. _interface-holes:
+
+.. figure:: ../_static/base_plate_interface_holes.png
+   :alt: Drawing showing the mounting features of the DynaArm base plate
+   :width: 100%
+
+   Drawing showing the mounting features of the DynaArm base plate
+
+.. list-table::
+   :header-rows: 1
+
+   * - **Detail**
+     - **Description**
+   * - A
+     - Alignment hole
+   * - B
+     - Alignment slot
+
+- Mount the robot in either a conventional or unconventional configuration, depending on the application, as shown in the following drawings.
+
+The following drawing illustrates the steps required for the conventional mounting of the robot arm.
+
+.. _conventional-mounting:
+
+.. figure:: ../_static/conventional_mounting_configuration.png
+   :alt: Illustration of the conventional mounting configuration of the DynaArm
+   :width: 100%
+
+   Illustration of the conventional mounting configuration of the DynaArm
+
+.. list-table::
+   :header-rows: 1
+
+   * - **Item**
+     - **Description**
+     - **Details**
+   * - 1
+     - DynaArm
+     - 
+   * - 2
+     - 2x Dowel Pins Ø5 H7
+     - Secure the robot arm's position and prevent further movement.
+   * - 3
+     - Ground
+     - Ensure clearance for M6 screws at the positions marked on the diagram :numref:`interface-holes`.
+   * - 4
+     - 6x M6 metric screws, Strength class 8.8
+     - Tighten the screws with a recommended torque of 9.5 Nm.
+
+The following drawing illustrates the steps required for the unconventional mounting of the robot arm.
+
+.. _unconventional-mounting:
+
+.. figure:: ../_static/unconventional_mounting_configuration.png
+   :alt: Illustration of the unconventional mounting configuration of the DynaArm
+   :width: 100%
+
+   Illustration of the unconventional mounting configuration of the DynaArm
+
+.. list-table::
+   :header-rows: 1
+
+   * - **Item**
+     - **Description**
+     - **Details**
+   * - 1
+     - DynaArm
+     - 
+   * - 2
+     - 2x Dowel Pins Ø5 H7
+     - Secure the robot arm's position and prevent further movement.
+   * - 3
+     - Ground
+     - Ensure M5 tapped holes at the positions marked on the diagram :numref:`interface-holes`.
+   * - 4
+     - 6x M5 metric screws, Strength class 8.8
+     - Tighten the screws with a recommended torque of 5.6 Nm.
+
 
 3. **Verify Stability:**
 
    - Ensure the robot does not wobble or shift during operation.
    - Tighten all screws and bolts securely.
-
 
 .. _wiring_and_connections:
 
@@ -40,9 +113,9 @@ Wiring and Connections
    - Use a 48 V power supply that meets the specifications listed in the **Technical Specifications** section.
    - Ensure the power supply is properly grounded.
 
-2. **Ethercat Connection:**
+2. **EtherCAT Connection:**
 
-   - Connect the Ethercat cable to the robot and the Controller PC.
+   - Connect the EtherCAT cable to the robot and the Controller PC.
    - Verify that the network interface is configured correctly:
      .. code-block:: bash
 
