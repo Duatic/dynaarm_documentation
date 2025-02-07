@@ -44,3 +44,8 @@ Resources
 ---------
 
 - For additional resources, visit the `DynaArm homepage <https://duatic.com/robotic-arm/>`_.
+
+.. |date| date::
+.. |time| date:: %H:%M
+
+Built on |date| at |time| GMT
