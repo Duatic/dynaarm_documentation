@@ -28,6 +28,9 @@ master_doc = "index"
 
 source_suffix = ".rst"
 
+# Automatically sets numbers to figures. Used for referencing figures properly.
+numfig = True
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
@@ -40,6 +43,7 @@ html_theme_options = {
     "navigation_depth": -1,
 
 }
+
 html_context = {
     "display_github": True,
     "github_user": "Duatic",
@@ -52,7 +56,6 @@ html_context = {
 
 html_favicon = "_static/logo_small.png"
 html_logo = "_static/logo.png"
-
 
 # -- Options for PDF output --------------------------------------------------------------------------------
 #latex_engine = "xelatex"
