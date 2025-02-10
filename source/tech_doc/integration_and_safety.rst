@@ -41,9 +41,9 @@ The following drawing indicates the base plate's mounting features for secure at
 
 The following drawing illustrates the steps required for the bottom mounting of the robot arm.
 
-.. _conventional-mounting:
+.. _bottom-mounting:
 
-.. figure:: ../_static/conventional_mounting_configuration.png
+.. figure:: ../_static/bottom_mounting_configuration.png
    :alt: Illustration of the bottom mounting configuration of the DynaArm
    :width: 100%
 
@@ -70,9 +70,9 @@ The following drawing illustrates the steps required for the bottom mounting of 
 
 The following drawing illustrates the steps required for the top mounting of the robot arm.
 
-.. _unconventional-mounting:
+.. _top-mounting:
 
-.. figure:: ../_static/unconventional_mounting_configuration.png
+.. figure:: ../_static/top_mounting_configuration.png
    :alt: Illustration of the top mounting configuration of the DynaArm
    :width: 100%
 
