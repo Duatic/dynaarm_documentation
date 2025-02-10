@@ -44,7 +44,8 @@ Wiring and Connections
 
    - Connect the Ethercat cable to the robot and the Controller PC.
    - Verify that the network interface is configured correctly:
-     .. code-block:: bash
+
+   .. code-block:: bash
 
         sudo ip link set eth0 up
         sudo ip addr add 192.168.1.2/24 dev eth0
