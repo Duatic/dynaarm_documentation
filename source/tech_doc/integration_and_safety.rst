@@ -37,17 +37,17 @@ The following drawing indicates the base plate's mounting features for secure at
    * - B
      - Alignment slot
 
-- Mount the robot in either a conventional or unconventional configuration, depending on the application, as shown in the following drawings.
+- Mount the robot in either a bottom or top configuration, depending on the application, as shown in the following drawings.
 
-The following drawing illustrates the steps required for the conventional mounting of the robot arm.
+The following drawing illustrates the steps required for the bottom mounting of the robot arm.
 
 .. _conventional-mounting:
 
 .. figure:: ../_static/conventional_mounting_configuration.png
-   :alt: Illustration of the conventional mounting configuration of the DynaArm
+   :alt: Illustration of the bottom mounting configuration of the DynaArm
    :width: 100%
 
-   Illustration of the conventional mounting configuration of the DynaArm
+   Illustration of the bottom mounting configuration of the DynaArm
 
 .. list-table::
    :header-rows: 1
@@ -68,15 +68,15 @@ The following drawing illustrates the steps required for the conventional mounti
      - 6x M6 metric screws, Strength class 8.8
      - Tighten the screws with a recommended torque of 9.5 Nm.
 
-The following drawing illustrates the steps required for the unconventional mounting of the robot arm.
+The following drawing illustrates the steps required for the top mounting of the robot arm.
 
 .. _unconventional-mounting:
 
 .. figure:: ../_static/unconventional_mounting_configuration.png
-   :alt: Illustration of the unconventional mounting configuration of the DynaArm
+   :alt: Illustration of the top mounting configuration of the DynaArm
    :width: 100%
 
-   Illustration of the unconventional mounting configuration of the DynaArm
+   Illustration of the top mounting configuration of the DynaArm
 
 .. list-table::
    :header-rows: 1

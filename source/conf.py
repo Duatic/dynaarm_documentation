@@ -28,6 +28,7 @@ master_doc = "index"
 
 source_suffix = ".rst"
 
+# Automatically sets numbers to figures. Used for referencing figures properly.
 numfig = True
 
 # -- Options for HTML output -------------------------------------------------
